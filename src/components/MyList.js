@@ -4,10 +4,9 @@ function MyList(props) {
     const updateItem = props.updateItem
 
     const listItems = items.map((item) => {
-        let deco = "none"
+        let deco = ""
 
         if (item.clicked) {
-            console.log("clicked")
             deco = "line-through"
         }
 
@@ -15,8 +14,6 @@ function MyList(props) {
             <li key={item.id} onClick={() => updateItem(item.id)} style={{ textDecoration: deco }}>{item.text}</li>
         )
     })
-
-    console.log(listItems)
 
     return (
         <div>

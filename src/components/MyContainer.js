@@ -12,7 +12,6 @@ function MyContainer() {
     function handleClick() {
         const newText = document.getElementById("textInput").value
         document.getElementById("textInput").value = ""
-        console.log(items)
         setItems([
             ...items, 
             {
@@ -26,7 +25,6 @@ function MyContainer() {
     function updateItem(id) {
         const found = items.find((element) => element.id == id)
         found.clicked = true
-        console.log(items)
         setItems([...items])
     }
 
